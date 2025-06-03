@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d141cb5b-8dce-4be0-96ba-a0222bf8d4d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/RegisterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Scripts/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Scripts/UserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/RegisterPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/RegisterPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Scripts/UserManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Scripts/UserManager.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
       <updated>1748506320127</updated>
       <workItem from="1748506321691" duration="1257000" />
       <workItem from="1748830591053" duration="1407000" />
-      <workItem from="1748868574276" duration="3603000" />
+      <workItem from="1748868574276" duration="5549000" />
     </task>
     <servers />
   </component>
