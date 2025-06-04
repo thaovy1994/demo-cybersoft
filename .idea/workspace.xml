@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d141cb5b-8dce-4be0-96ba-a0222bf8d4d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reports/ExtentReportManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/listeners/LoggerUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/listeners/SimpleListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/ScreenshotUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/RegisterPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Scripts/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Scripts/UserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegisterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Scripts/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/scripts/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Scripts/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/scripts/UserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/HomePage.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/RegisterPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/RegisterPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Scripts/UserManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Scripts/UserManager.class" afterDir="false" />
     </list>
@@ -45,6 +53,50 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
 }</component>
+  <component name="RunManager" selected="TestNG.UserManager.verifyValidRegistration">
+    <configuration name="UserManager.verifyEmptyRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="demo_5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="scripts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Scripts" />
+      <option name="MAIN_CLASS_NAME" value="scripts.UserManager" />
+      <option name="METHOD_NAME" value="verifyEmptyRegistration" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserManager.verifyValidRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="demo_5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="scripts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Scripts" />
+      <option name="MAIN_CLASS_NAME" value="scripts.UserManager" />
+      <option name="METHOD_NAME" value="verifyValidRegistration" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.UserManager.verifyValidRegistration" />
+        <item itemvalue="TestNG.UserManager.verifyEmptyRegistration" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,7 +107,9 @@
       <updated>1748506320127</updated>
       <workItem from="1748506321691" duration="1257000" />
       <workItem from="1748830591053" duration="1407000" />
-      <workItem from="1748868574276" duration="12445000" />
+      <workItem from="1748868574276" duration="24155000" />
+      <workItem from="1749059094560" duration="344000" />
+      <workItem from="1749060412256" duration="4056000" />
     </task>
     <servers />
   </component>

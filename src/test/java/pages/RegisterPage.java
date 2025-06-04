@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +8,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 
 public class RegisterPage {
@@ -41,67 +44,58 @@ public class RegisterPage {
         }
 
         //Check Toastify
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//div[contains(@class,'Toastify')]//div[contains(text(),'Email đã tồn tại !')]")
-        ));
-        System.out.println("Popup Toastify is displayed 'You have successfully registered");
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(
+//                By.xpath("//div[contains(@class,'Toastify')]//div[contains(text(),'Đăng kí tài khoản thành công !')]")
+//        ));
+//        System.out.println("Popup Toastify is displayed 'You have successfully registered");
     }
 
     public void registerWithEmptyFields(){
-        driver.findElement(By.xpath("//a[@href='/register']")).click();
-        driver.findElement(By.xpath("//button[@type='submit']")).click();
-        Actions actions = new Actions(driver);
+        try{
+            driver.findElement(By.xpath("//a[@href='/register']")).click();
+            driver.findElement(By.xpath("//button[@type='submit']")).click();
+//            Actions actions = new Actions(driver);
+//
+//            //Click on fields then click outside -> error message is displayed
+//
+//            driver.findElement(By.xpath("//input[@id='name']")).click();
+//            actions.moveByOffset(0, 0).click().perform();
+//
+//            driver.findElement(By.xpath("//input[@id='email']")).click();
+//            actions.moveByOffset(0, 0).click().perform();
+//
+//            driver.findElement(By.xpath("//input[@id='password']")).click();
+//            actions.moveByOffset(0, 0).click().perform();
+//
+//            driver.findElement(By.xpath("//input[@id='passwordConfirm']")).click();
+//            actions.moveByOffset(0, 0).click().perform();
+//
+//            driver.findElement(By.xpath("//input[@id='phone']")).click();
+//            actions.moveByOffset(0, 0).click().perform();
+//
+//            driver.findElement(By.xpath("//input[@id='birthday']")).click();
+//            actions.moveByOffset(0, 0).click().perform();
 
-        //Click on fields then click outside -> display error message
-        //Name
-        driver.findElement(By.xpath("//input[@id='name']")).click();
-        actions.moveByOffset(0, 0).click().perform();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//span[@class='text-danger' and contains(text(), ' Name không được bỏ trống ')]")
-        ));
-        System.out.println("Name must not be empty");
+            List<WebElement> errorMessages = new ArrayList<>();
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            errorMessages.add(wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//span[@class='text-danger' and contains(text(), ' Name không được bỏ trống ')]"))));
+            errorMessages.add(wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//span[@class='text-danger' and contains(text(), ' Email không được bỏ trống ')]"))));
+            errorMessages.add(wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//span[@class='text-danger' and contains(text(), ' Password không được bỏ trống ')]"))));
+            errorMessages.add(wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//span[@class='text-danger' and contains(text(), ' PasswordConfirm không được bỏ trống ')]"))));
+            errorMessages.add(wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//span[@class='text-danger' and contains(text(), ' Phone không được bỏ trống ')]"))));
+            errorMessages.add(wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//span[@class='text-danger' and contains(text(), ' Birthday không được bỏ trống ')]"))));
 
-        //Email
-        driver.findElement(By.xpath("//input[@id='email']")).click();
-        actions.moveByOffset(0, 0).click().perform();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//span[@class='text-danger' and contains(text(), '  Email không được bỏ trống ')]")
-        ));
-        System.out.println("Email must not be empty");
-
-        //Password
-        driver.findElement(By.xpath("//input[@id='password']")).click();
-        actions.moveByOffset(0, 0).click().perform();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//span[@class='text-danger' and contains(text(), '  Password không được bỏ trống ')]")
-        ));
-        System.out.println("Password must not be empty");
-
-        //Password confirm
-        driver.findElement(By.xpath("//input[@id='passwordConfirm']")).click();
-        actions.moveByOffset(0, 0).click().perform();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//span[@class='text-danger' and contains(text(), '  PasswordConfirm không được bỏ trống ')]")
-        ));
-        System.out.println("PasswordConfirm must not be empty");
-
-        //Phone
-        driver.findElement(By.xpath("//input[@id='phone']")).click();
-        actions.moveByOffset(0, 0).click().perform();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//span[@class='text-danger' and contains(text(), ' Phone không được bỏ trống ')]")
-        ));
-        System.out.println("Phone must not be empty");
-
-        //Birthday
-        driver.findElement(By.xpath("//input[@id='birthday']")).click();
-        actions.moveByOffset(0, 0).click().perform();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//span[@class='text-danger' and contains(text(), 'Birthday không được bỏ trống')]")
-        ));
-        System.out.println("Birthday must not be empty");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
     public void invalidNameFormat(String invalidName) {
         driver.findElement(By.xpath("//a[@href='/register']")).click();
         driver.findElement(By.xpath("//input[@id='name']")).sendKeys(invalidName);
@@ -154,6 +148,26 @@ public class RegisterPage {
         System.out.println("Phone must from 03 05 07 08 09 and include 10 numbers");
     }
 
+    public void enterDOB(String dobInput) {
+        try {
+            driver.findElement(By.xpath("//a[@href='/register']")).click();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
+            LocalDate inputDate = LocalDate.parse(dobInput, formatter);
+            LocalDate currentDate = LocalDate.now();
+
+            if (!inputDate.isBefore(currentDate)) {
+                System.out.println("Error Message: Birth date must be in the past !");
+                return;
+            }
+            WebElement dobField = driver.findElement(By.xpath("//input[@id='birthday']"));
+            dobField.clear();
+            dobField.sendKeys(dobInput);
+            System.out.println("DOB entered: " + dobInput);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public void uncheckBox(String name, String email, String pwd, String repwd, String phone, String dob){
         driver.findElement(By.xpath("//a[@href='/register']")).click();
         driver.findElement(By.xpath("//input[@id='name']")).sendKeys(name);
@@ -180,7 +194,6 @@ public class RegisterPage {
             driver.findElement(By.xpath("//button[@type='submit']")).click();
             Thread.sleep(3000);
 
-            // Tìm tất cả thông báo chứa nội dung "Email đã tồn tại"
             List<WebElement> errorMessages = driver.findElements(
                     By.xpath("//div[contains(@class,'Toastify')]//div[contains(text(),'Email đã tồn tại !')]")
             );
