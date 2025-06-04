@@ -12,8 +12,8 @@ public class LoginPage {
 
     public void login(String email, String pwd){
         driver.findElement(By.xpath("(//a[@href='/login'])[2]")).click();
-        driver.findElement(By.xpath("//input[@id='taiKhoan']")).sendKeys(email);
-        driver.findElement(By.xpath("//input[@id='matKhau']")).sendKeys(pwd);
+        driver.findElement(By.xpath("//input[@id='email']")).sendKeys(email);
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys(pwd);
 
         WebElement remember = driver.findElement(By.name("remember"));
         boolean isRemember = remember.isSelected();
