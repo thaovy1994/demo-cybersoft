@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -37,11 +38,7 @@ public class RegisterPage {
         wait.until(ExpectedConditions.urlContains("/login"));
 
         String currentUrl = driver.getCurrentUrl();
-        if (currentUrl.contains("/login")) {
-            System.out.println("Successfully navigated to the login page.");
-        } else {
-            System.out.println("Did not navigate to the correct login page.");
-        }
+        Assert.assertTrue(currentUrl.contains("/login"), "Did not navigate to the correct login page.");
 
         //Check Toastify
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(

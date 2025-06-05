@@ -1,12 +1,12 @@
 package scripts;
 
-import listeners.SimpleListener;
+import listeners.TestListener;
 import org.testng.annotations.Listeners;
 import pages.RegisterPage;
 import org.testng.annotations.Test;
 
-@Listeners(SimpleListener.class)
-public class UserManager extends BaseTest{
+@Listeners(TestListener.class)
+public class RegistrationTest extends BaseTest{
     @Test
     public void verifyValidRegistration(){
         RegisterPage registerPage = new RegisterPage(driver);

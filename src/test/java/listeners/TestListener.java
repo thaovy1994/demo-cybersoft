@@ -8,11 +8,12 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import reports.ExtentReportManager;
 import scripts.BaseTest;
+import utils.LoggerUtil;
 import utils.ScreenshotUtil;
 
 import java.util.logging.Logger;
 
-public class SimpleListener implements ITestListener {
+public class TestListener implements ITestListener {
     private static final Logger logger = LoggerUtil.getLogger("SimpleListener");
     private static final ExtentReports extent = ExtentReportManager.getInstance();
     private static final ThreadLocal<ExtentTest> testThread = new ThreadLocal<>();
